@@ -35,10 +35,10 @@ class SearchCustomer:
         self.driver.find_element(By.ID, self.button_search_id).click()
 
     def getNoOfRows(self):
-        return len(self.driver.find_element(By.XPATH,self.tableRows_xpath))
+        return len(self.driver.find_elements(By.XPATH,self.tableRows_xpath))
 
     def getNoOfColumn(self):
-        return len(self.driver.find_element(By.XPATH,self.tableColumns_xpath))
+        return len(self.driver.find_elements(By.XPATH,self.tableColumns_xpath))
 
     def searchCustomerByEmail(self,email):
         flag=False
